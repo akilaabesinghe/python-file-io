@@ -2,8 +2,7 @@
 
 import re
 
-pattern = r'herit'
-re_pattern = re.compile(pattern,re.IGNORECASE)
+re_pattern = re.compile(r'herit',re.IGNORECASE)
 #print(re_pattern)
 
 print('Opening origin.txt')
