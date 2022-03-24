@@ -2,7 +2,7 @@
 
 import re
 
-re_pattern = re.compile(r'herit',re.IGNORECASE)
+re_pattern = re.compile(r'\w*herit\w*',re.IGNORECASE)
 #print(re_pattern)
 
 print('Opening origin.txt')
@@ -11,8 +11,6 @@ with open('origin.txt', 'r') as in_stream:
     with open('output.txt', 'w') as out_stream:
         for line in in_stream:
             line = line.strip()
-            #all=re_pattern.findall(line)
-            #all_lines=re_pattern.finditer(line)
             for finds in re_pattern.findall(line):
                 out_stream.write('{0}\n'.format(finds))
 print("Done!")
